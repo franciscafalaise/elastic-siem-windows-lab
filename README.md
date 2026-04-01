@@ -71,10 +71,20 @@ Windows Event ID **4625 (failed login)** was monitored to detect abnormal authen
 
 ## � Screenshots
 
-![Dashboard](.[siem dashboard.pdf](https://github.com/user-attachments/files/26423029/siem.dashboard.pdf)
-![Failed Logins](.[Failed login.pdf](https://github.com/user-attachments/files/26423128/Failed.login.pdf)
-![Authentication Outcomes](.[Authentication Outcomes.pdf](https://github.com/user-attachments/files/26423236/Authentication.Outcomes.pdf)
+![dashboard-overview.png](.[<img width="1540" height="1194" alt="image" src="https://github.com/user-attachments/assets/0fb9ffdb-dd1a-49b2-ab47-249c1beb2f7a" />
+(https://github.com/user-attachments/files/26423029/siem.dashboard.pdf)
+## � SIEM Dashboard Overview
+This dashboard visualizes Windows authentication activity using Winlogbeat and Kibana.
 
+![failed-logins.png](.[Failed login.<img width="1496" height="1180" alt="Failed login" src="https://github.com/user-attachments/assets/f7b9a336-e78f-41e2-a6c4-e8c186c890ea" />
+(https://github.com/user-attachments/files/26423128/Failed.login.pdf)
+## � Failed Login Attempts Over Time
+Displays Event ID 4625 (failed logins) to identify brute force or suspicious authentication attempts.
+
+![Authentication Outcomes](.[Authentication Outcomes.pdf]<img width="756" height="420" alt="a68475ae-fdfd-4412-9e5e-42765d83d001" src="https://github.com/user-attachments/assets/ea307303-67ca-46b5-bbdf-bfb6cfe0b139" />
+(https://github.com/user-attachments/files/26423236/Authentication.Outcomes.pdf)
+## � Authentication Outcomes (Success vs Failure)
+Breakdown of successful (4624) vs failed (4625) login attempts.
 
 ---
 
