@@ -4,6 +4,27 @@
 This project demonstrates a hands-on SIEM (Security Information and Event Management) lab using the Elastic Stack to monitor and analyze Windows security events.
 
 The goal was to simulate how a Security Operations Center (SOC) detects and investigates suspicious authentication activity such as failed login attempts and potential brute force attacks.
+� Threat Detection: Brute Force Login Attack
+
+This lab simulates and detects brute force login attempts on a Windows system using Elastic SIEM.
+
+� Detection Logic
+Event ID: 4625 (Failed Login)
+Monitored over time for spikes in authentication failures
+High volume indicates potential brute force activity
+� Key Findings
+Multiple failed login attempts observed in short time intervals
+Certain user accounts (e.g., Administrator) targeted frequently
+All events originated from the same host, indicating attack simulation
+� Security Insight
+
+A spike in Event ID 4625 events can indicate:
+
+Brute force attacks
+Credential stuffing
+Unauthorized access attempts
+
+Monitoring these patterns is critical in a SOC environment.
 
 � Technologies Used
 Elasticsearch
@@ -61,7 +82,19 @@ Automate response workflows
 
 This lab provided practical experience in:
 [Screenshot 2026-04-01 181815 copy.png.pdf](https://github.com/user-attachments/files/26422662/Screenshot.2026-04-01.181815.copy.png.pdf)
+## � Dashboard
+
+![Failed Logins](./screenshots/failed-logins.png)
+![Authentication Breakdown](./screenshots/auth.png)
+![Top Users](./screenshots/users.png)
 <img width="1620" height="1232" alt="siem photo" src="https://github.com/user-attachments/assets/12c0b6ad-acae-4aaa-a5e1-e7a867547d3f" />
+
+## � Detection Improvement
+
+Future enhancements:
+- Alert when failed logins > 10 within 5 minutes
+- Correlate with successful logins (Event ID 4624)
+- Track source IPs for attack attribution
 
 Monitoring authentication activity
 Identifying suspicious login behavior
