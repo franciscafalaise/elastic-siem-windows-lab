@@ -1,116 +1,94 @@
-# Windows SIEM Dashboard – Failed Login Detection
+# �️ Elastic SIEM Windows Lab
 
-## � Overview
-This project demonstrates a hands-on Security Information and Event Management (SIEM) lab using the Elastic Stack to monitor and analyze Windows security events.
+## � Project Overview
+This project demonstrates a hands-on Security Information and Event Management (SIEM) lab using the Elastic Stack (Elasticsearch, Kibana, Winlogbeat).
 
-The objective was to simulate real-world SOC (Security Operations Center) workflows by detecting and investigating suspicious authentication activity.
-
----
-
-## � Use Case: Detecting Brute Force Attacks
-This lab focuses on identifying brute force login attempts using Windows Security Event Logs.
-
-Windows Event ID **4625 (failed login)** was monitored to detect abnormal authentication patterns and potential unauthorized access attempts.
+The goal of this lab was to:
+- Ingest Windows event logs
+- Monitor authentication activity
+- Detect failed login attempts (potential brute force attacks)
+- Build visual dashboards for security analysis
 
 ---
 
 ## � Technologies Used
-- Elasticsearch  
-- Kibana  
-- Winlogbeat  
-- Windows 10 Virtual Machine  
-- VirtualBox  
+- Elastic Stack (Elasticsearch + Kibana)
+- Winlogbeat (log ingestion)
+- Windows 10 VM (target machine)
+- Oracle VirtualBox
 
 ---
 
-## ⚙️ Architecture
-- Windows VM generates security logs  
-- Winlogbeat collects event logs  
-- Logs are sent to Elasticsearch  
-- Kibana visualizes and analyzes the data  
+## � Key Detection Use Case
+
+### � Failed Login Detection
+- Event ID **4625** → Failed logins  
+- Event ID **4624** → Successful logins  
+
+This lab focuses on identifying:
+- Brute force login attempts
+- Suspicious authentication patterns
+- Targeted user accounts
 
 ---
 
-## � Detection Logic
-- Event ID: **4625 (Failed Login)**
-- Query: `event.code: 4625`
-- Indicators of compromise:
-  - High frequency of failed login attempts  
-  - Repeated attempts against specific user accounts  
-  - Sudden spikes in authentication failures  
+## � Dashboard Visualizations
+
+### � Failed Login Attempts Over Time
+Shows spikes in failed login activity (Event ID 4625), useful for detecting brute force attacks.
+
+<img width="1496" height="1180" alt="Failed login" src="https://github.com/user-attachments/assets/154988a0-777f-4ff9-864d-baae8501ccc5" />
+
 
 ---
 
-## � Dashboard & Analysis
+### � Authentication Outcomes (Success vs Failure)
+Compares successful vs failed login attempts.
 
-### � Failed Login Monitoring
-- Visualized failed login attempts over time  
-- Identified spikes indicating possible brute force behavior  
-
-### � Targeted User Analysis
-- Highlighted frequently targeted accounts (e.g., Administrator)  
-- Identified patterns in attacker behavior  
-
-### �️ Source System Tracking
-- Analyzed host systems generating login attempts  
-- Confirmed activity origin within lab environment  
-
-### � Authentication Outcomes
-- Compared successful vs failed login attempts  
-- Provided visibility into authentication trends  
+![Auth Outcomes<img width="756" height="420" alt="Authentication outcomes" src="https://github.com/user-attachments/assets/451ddca3-fc5c-4efb-be88-69e65207b161" />
+](./images/auth-outcomes.png)
 
 ---
 
-## � Findings
-- Multiple failed login attempts detected within short time intervals  
-- Repeated targeting of privileged accounts (Administrator)  
-- All activity originated from the same host (lab simulation)  
-- Patterns consistent with brute force attack behavior  
+### � Top Targeted User Accounts
+Identifies which user accounts are being targeted most frequently.
+
+![Top Users](./images/top-user<img width="673" height="423" alt="top target user accounts" src="https://github.com/user-attachments/assets/acac6d9f-db58-4b7c-9d1f-64ef76204645" />
+s.png)
 
 ---
 
-## � Screenshots
+### �️ Dashboard Overview
+Full SIEM dashboard showing authentication activity across the system.
 
-![dashboard-overview.png](.[<img width="1540" height="1194" alt="image" src="https://github.com/user-attachments/assets/0fb9ffdb-dd1a-49b2-ab47-249c1beb2f7a" />
-(https://github.com/user-attachments/files/26423029/siem.dashboard.pdf)
-## � SIEM Dashboard Overview
-This dashboard visualizes Windows authentication activity using Winlogbeat and Kibana.
+[elastic-siem-windows-lab.pdf](https://github.com/user-attachments/files/26424152/elastic-siem-windows-lab.pdf)
 
-![failed-logins.png](.[Failed login.<img width="1496" height="1180" alt="Failed login" src="https://github.com/user-attachments/assets/f7b9a336-e78f-41e2-a6c4-e8c186c890ea" />
-(https://github.com/user-attachments/files/26423128/Failed.login.pdf)
-## � Failed Login Attempts Over Time
-Displays Event ID 4625 (failed logins) to identify brute force or suspicious authentication attempts.
-
-![Authentication Outcomes](.[Authentication Outcomes.pdf]<img width="756" height="420" alt="a68475ae-fdfd-4412-9e5e-42765d83d001" src="https://github.com/user-attachments/assets/ea307303-67ca-46b5-bbdf-bfb6cfe0b139" />
-(https://github.com/user-attachments/files/26423236/Authentication.Outcomes.pdf)
-## � Authentication Outcomes (Success vs Failure)
-Breakdown of successful (4624) vs failed (4625) login attempts.
 
 ---
 
-## � Security Insight
-A high volume of Event ID 4625 logs can indicate:
-- Brute force attacks  
-- Credential stuffing  
-- Unauthorized access attempts  
+## � Skills Demonstrated
+- Log ingestion & parsing
+- SIEM dashboard creation
+- Security event analysis
+- Threat detection using event IDs
+- Data visualization in Kibana
 
-Monitoring these patterns is critical for early threat detection in a SOC environment.
+---
+
+## � What I Learned
+- How to collect and analyze Windows logs using Elastic
+- How to detect authentication attacks using event IDs
+- How to build dashboards for SOC monitoring
 
 ---
 
 ## � Future Improvements
-- Implement alerting for failed login thresholds  
-- Correlate failed logins with successful logins (Event ID 4624)  
-- Track source IP addresses for attribution  
-- Integrate additional telemetry (Sysmon, network logs)  
+- Add alerting rules for brute force detection
+- Integrate Sysmon for deeper visibility
+- Simulate attacks (Hydra / RDP brute force)
 
 ---
 
-## � Outcome
-This lab provided hands-on experience with:
-- SIEM deployment and configuration  
-- Log ingestion and analysis  
-- Threat detection and investigation  
-- Security data visualization  
-
-This project simulates real SOC analyst responsibilities in monitoring and responding to authentication-based threats.
+## � Author
+Francisca Falaise  
+Aspiring SOC Analyst | Cybersecurity Student
