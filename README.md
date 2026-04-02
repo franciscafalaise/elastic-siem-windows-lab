@@ -45,7 +45,7 @@ Shows spikes in failed login activity (Event ID 4625), useful for detecting brut
 ### � Authentication Outcomes (Success vs Failure)
 Compares successful vs failed login attempts.
 
-![Auth Outcomes<img width="756" height="420" alt="Authentication outcomes" src="https://github.com/user-attachments/assets/451ddca3-fc5c-4efb-be88-69e65207b161" />
+<img width="756" height="420" alt="Authentication outcomes" src="https://github.com/user-attachments/assets/451ddca3-fc5c-4efb-be88-69e65207b161" />
 ](./images/auth-outcomes.png)
 
 ---
@@ -53,15 +53,16 @@ Compares successful vs failed login attempts.
 ### � Top Targeted User Accounts
 Identifies which user accounts are being targeted most frequently.
 
-![Top Users](./images/top-user<img width="673" height="423" alt="top target user accounts" src="https://github.com/user-attachments/assets/acac6d9f-db58-4b7c-9d1f-64ef76204645" />
-s.png)
+(./images/top-user<img width="673" height="423" alt="top target user accounts" src="https://github.com/user-attachments/assets/acac6d9f-db58-4b7c-9d1f-64ef76204645" />
+
 
 ---
 
 ### �️ Dashboard Overview
 Full SIEM dashboard showing authentication activity across the system.
+[elastic-siem-windows-lab.pdf](https://github.com/user-attachments/files/26424164/elastic-siem-windows-lab.pdf)
 
-[elastic-siem-windows-lab.pdf](https://github.com/user-attachments/files/26424152/elastic-siem-windows-lab.pdf)
+
 
 
 ---
