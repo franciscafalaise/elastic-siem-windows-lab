@@ -37,7 +37,7 @@ This lab focuses on identifying:
 ### � Failed Login Attempts Over Time
 Shows spikes in failed login activity (Event ID 4625), useful for detecting brute force attacks.
 
-<img width="1496" height="1180" alt="Failed login" src="https://github.com/user-attachments/assets/154988a0-777f-4ff9-864d-baae8501ccc5" />
+ width="1496" height="1180" alt="Failed login" src="https://github.com/user-attachments/assets/154988a0-777f-4ff9-864d-baae8501ccc5" />
 
 
 ---
@@ -45,15 +45,15 @@ Shows spikes in failed login activity (Event ID 4625), useful for detecting brut
 ### � Authentication Outcomes (Success vs Failure)
 Compares successful vs failed login attempts.
 
-<img width="756" height="420" alt="Authentication outcomes" src="https://github.com/user-attachments/assets/451ddca3-fc5c-4efb-be88-69e65207b161" />
-](./images/auth-outcomes.png)
+width="756" height="420" alt="Authentication outcomes" src="https://github.com/user-attachments/assets/451ddca3-fc5c-4efb-be88-69e65207b161" />
+]
 
 ---
 
 ### � Top Targeted User Accounts
 Identifies which user accounts are being targeted most frequently.
 
-(./images/top-user<img width="673" height="423" alt="top target user accounts" src="https://github.com/user-attachments/assets/acac6d9f-db58-4b7c-9d1f-64ef76204645" />
+<img width="673" height="423" alt="top target user accounts" src="https://github.com/user-attachments/assets/acac6d9f-db58-4b7c-9d1f-64ef76204645" />
 
 
 ---
